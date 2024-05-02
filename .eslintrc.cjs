@@ -51,7 +51,6 @@ module.exports = {
     'react/state-in-constructor': 'off',
     'no-restricted-syntax': 'off',
     'no-continue': 'off',
-    eqeqeq: 'off',
     'react/destructuring-assignment': 'off',
     '@typescript-eslint/dot-notation': 'off',
     'no-bitwise': 'off',

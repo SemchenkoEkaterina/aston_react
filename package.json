@@ -6,6 +6,10 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.8",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
     "prettier": "^3.2.5",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
@@ -21,7 +25,8 @@
     "lint:fix": "eslint --fix .",
     "type-check": "tsc --noEmit",
     "prettier": "prettier -c .",
-    "prettier:fix": "prettier --write ."
+    "prettier:fix": "prettier --write .",
+    "tsc": "tsc"
   },
   "browserslist": {
     "production": [
@@ -47,6 +52,8 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-testing-library": "^6.2.2",
-    "globals": "^15.0.0"
+    "globals": "^15.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.5"
   }
 }
