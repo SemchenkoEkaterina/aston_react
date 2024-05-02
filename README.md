@@ -1,5 +1,3 @@
-![main branch status](https://github.com/SemchenkoEkaterina/aston_react/actions/workflows/ci-cd.yml/badge.svg?branch=main)
-
 ![ci-cd workflow status](https://github.com/SemchenkoEkaterina/aston_react/actions/workflows/ci-cd.yml/badge.svg)
 
 # Getting Started with Create React App
