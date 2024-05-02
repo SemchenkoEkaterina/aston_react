@@ -6,7 +6,7 @@ module.exports = {
       jsx: true,
     },
     sourceType: 'module',
-    project: './tsconfig.build.json',
+    project: './tsconfig.json',
   },
   extends: [
     'plugin:import/recommended',
