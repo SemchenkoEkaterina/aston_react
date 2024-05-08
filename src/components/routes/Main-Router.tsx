@@ -9,27 +9,13 @@ const MainRouter = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route element={<PrivateRoute />}>
-            {authRoutes.map((route) => {
-              const Component = () => route.component
-              return (
-                <Route
-                  key={route.path}
-                  path={route.path}
-                  element={<Component />}
-                />
-              )
-            })}
+            {authRoutes.map(({ path, Component }) => (
+              <Route key={path} path={path} element={<Component />} />
+            ))}
           </Route>
-          {routes.map((route) => {
-            const Component = () => route.component
-            return (
-              <Route
-                key={route.path}
-                path={route.path}
-                element={<Component />}
-              />
-            )
-          })}
+          {routes.map(({ path, Component }) => (
+            <Route key={path} path={path} element={<Component />} />
+          ))}
         </Routes>
       </Suspense>
     </BrowserRouter>

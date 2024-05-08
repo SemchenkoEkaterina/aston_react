@@ -19,33 +19,33 @@ const Search = lazy(() => import('../../pages/Search'))
 export const routes = [
   {
     path: HOME_ROUTE,
-    component: <Home />,
+    Component: Home,
   },
   {
     path: HOME_ROUTE + '/:id',
-    component: <Card />,
+    Component: Card,
   },
   {
     path: LOGIN_ROUTE,
-    component: <Auth />,
+    Component: Auth,
   },
   {
     path: REGISTRATION_ROUTE,
-    component: <Registration />,
+    Component: Registration,
   },
   {
     path: SEARCH_ROUTE,
-    component: <Search />,
+    Component: Search,
   },
 ]
 
 export const authRoutes = [
   {
     path: FAVORITE_ROUTE,
-    component: <Favorite />,
+    Component: Favorite,
   },
   {
     path: HISTORY_ROUTE,
-    component: <History />,
+    Component: History,
   },
 ]
