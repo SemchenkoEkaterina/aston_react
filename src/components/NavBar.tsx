@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, ReactElement } from 'react'
 import { Navbar, Nav, Container, Button } from 'react-bootstrap'
 import {
   LOGIN_ROUTE,
@@ -8,7 +8,6 @@ import {
 } from '../utils/const'
 import { useAuth } from '../hooks/useAuth.hook'
 import { useAppDispatch, useAppSelector } from '../hooks/redux.hook'
-import { ReactElement } from 'react'
 import { logoutService } from '../utils/authService'
 
 export const NavBar = (): ReactElement => {
