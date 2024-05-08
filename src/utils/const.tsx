@@ -1,0 +1,6 @@
+export const HOME_ROUTE = '/'
+export const SEARCH_ROUTE = '/search'
+export const LOGIN_ROUTE = '/signin'
+export const REGISTRATION_ROUTE = '/signup'
+export const FAVORITE_ROUTE = '/favorites'
+export const HISTORY_ROUTE = '/history'
