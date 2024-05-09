@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkaston_react=self.webpackChunkaston_react||[]).push([[954],{9954:(e,a,s)=>{s.r(a),s.d(a,{default:()=>c});var t=s(579);const c=()=>(0,t.jsx)(t.Fragment,{children:"Home"})}}]);
-//# sourceMappingURL=954.e7e0e238.chunk.js.map

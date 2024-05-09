@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/359.5f442d2f.chunk.js","mappings":"4JAEA,MAIA,EAJeA,KACNC,EAAAA,EAAAA,KAAA,OAAAC,SAAM,U","sources":["pages/Search.tsx"],"sourcesContent":["import React from 'react'\n\nconst Search = () => {\n  return <div>{'Search'}</div>\n}\n\nexport default Search\n"],"names":["Search","_jsx","children"],"sourceRoot":""}

@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkaston_react=self.webpackChunkaston_react||[]).push([[797],{6797:(a,e,s)=>{s.r(e),s.d(e,{default:()=>c});s(5043);var t=s(579);const c=()=>(0,t.jsx)("div",{children:"Card"})}}]);
-//# sourceMappingURL=797.8e238ce2.chunk.js.map

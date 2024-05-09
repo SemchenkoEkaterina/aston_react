@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkaston_react=self.webpackChunkaston_react||[]).push([[163],{6163:(s,e,t)=>{t.r(e),t.d(e,{default:()=>c});t(5043);var a=t(579);const c=()=>(0,a.jsx)("div",{children:"History"})}}]);
-//# sourceMappingURL=163.616b2d88.chunk.js.map
