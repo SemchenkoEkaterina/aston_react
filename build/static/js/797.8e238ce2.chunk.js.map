@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/797.8e238ce2.chunk.js","mappings":"4JAEA,MAIA,EAJaA,KACJC,EAAAA,EAAAA,KAAA,OAAAC,SAAM,Q","sources":["pages/Card.tsx"],"sourcesContent":["import React from 'react'\n\nconst Card = () => {\n  return <div>{'Card'}</div>\n}\n\nexport default Card\n"],"names":["Card","_jsx","children"],"sourceRoot":""}
