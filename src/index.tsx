@@ -6,12 +6,15 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { store } from './store'
 import './firebase'
+import ErrorBoundary from './error/ErrorBoundary'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ErrorBoundary>
+        <App />
+      </ErrorBoundary>
     </Provider>
   </React.StrictMode>,
 )
