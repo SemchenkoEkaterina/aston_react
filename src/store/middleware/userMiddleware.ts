@@ -1,13 +1,16 @@
-import { createListenerMiddleware, isAnyOf } from '@reduxjs/toolkit'
-import { getDocs, collection, Firestore } from 'firebase/firestore'
+import {
+  createListenerMiddleware,
+  isAnyOf,
+  PayloadAction,
+} from '@reduxjs/toolkit'
+import { getDocs, collection } from 'firebase/firestore'
 import { db } from '../../firebase'
 import {
   setFavorite,
   removeFromFavorite,
 } from '../../store/slices/favoriteSlice'
-//import { setHistory, removeFromHistory } from '../../store/slices/historySlice'
+import { setHistory, removeFromHistory } from '../../store/slices/historySlice'
 import { setUser, removeUser } from '../../store/slices/userSlice'
-import { PayloadAction } from '@reduxjs/toolkit'
 
 type MyPayloadType = {
   email: string
@@ -30,7 +33,13 @@ importedListenerMiddleware.startListening({
       )
       const favoriteIds = favoriteIdsSnapshot.docs.map((doc) => doc.data().id)
 
+      const historyUrlsSnapshot = await getDocs(
+        collection(db, `users/${id}/history`),
+      )
+      const historyUrls = historyUrlsSnapshot.docs.map((doc) => doc.data().url)
+
       listenerApi.dispatch(setFavorite(favoriteIds))
+      listenerApi.dispatch(setHistory(historyUrls))
     } catch (error) {
       alert('Error fetching user data')
     }
@@ -42,6 +51,9 @@ importedListenerMiddleware.startListening({
   effect: async (action, listenerApi) => {
     listenerApi.dispatch(setFavorite([]))
     listenerApi.dispatch(removeFromFavorite(''))
+
+    listenerApi.dispatch(setHistory([]))
+    listenerApi.dispatch(removeFromHistory(0))
   },
 })
 
