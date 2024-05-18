@@ -22,7 +22,7 @@ export const routes = [
     Component: Home,
   },
   {
-    path: HOME_ROUTE + '/:id',
+    path: HOME_ROUTE + '/gifs/:id',
     Component: Card,
   },
   {

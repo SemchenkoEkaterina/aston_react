@@ -3,17 +3,7 @@ import { Button, Card, Container, Row } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { LOGIN_ROUTE, REGISTRATION_ROUTE } from '../utils/const'
-
-type FormValues = {
-  email: string
-  pass: string
-}
-
-type FormProps = {
-  title: string
-  isLogin: boolean
-  handleClick: (email: string, pass: string) => Promise<void>
-}
+import { FormProps } from '../types'
 
 const FormLogin = ({ title, isLogin, handleClick }: FormProps) => {
   const [email, setEmail] = useState('')
