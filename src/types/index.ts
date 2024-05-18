@@ -28,6 +28,11 @@ export type Suggest = {
   title: string
   images: ImagesFix
 }
+
+export type SuggestResponse = {
+  data: Suggest[]
+}
+
 export type ImagesFix = {
   fixed_height: { url: string; height: string; width: string }
 }

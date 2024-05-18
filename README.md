@@ -3,6 +3,7 @@
 # Giphy
 
 - API: [GIPHY API](https://developers.giphy.com/docs/api/endpoint)
+- Deploy: [netlify](https://delicate-pithivier-37d300.netlify.app)
 
 ---
 
@@ -42,6 +43,7 @@
 - [x] Используется [Transforming Responses](https://github.com/SemchenkoEkaterina/aston_react/blob/main/src/store/api/gifApi.tsx)
 
 ---
+
 ### 2 уровень (необязательный)
 
 - [x] Используется TypeScript

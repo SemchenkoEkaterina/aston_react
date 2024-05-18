@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { Suggest, ImagesFix } from '../../types'
+import { Suggest, SuggestResponse } from '../../types'
 
 const key_api = process.env.REACT_APP_API_TOKEN
 export const gifApi = createApi({
@@ -23,17 +23,12 @@ export const gifApi = createApi({
     }),
     getSuggests: builder.query<Suggest[], string>({
       query: (searchInput) => `search?q=${searchInput}&api_key=${key_api}`,
-      transformResponse: (response): Suggest[] => {
-        const res = response as {
-          data: { id: string; title: string; images: ImagesFix }[]
-        }
-
-        return res.data.map((result) => ({
+      transformResponse: (response: SuggestResponse): Suggest[] =>
+        response.data.map((result) => ({
           id: result.id,
           title: result.title,
           images: result.images,
-        }))
-      },
+        })),
     }),
   }),
 })

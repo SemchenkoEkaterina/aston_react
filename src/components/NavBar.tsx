@@ -1,5 +1,6 @@
-import React, { useEffect, ReactElement } from 'react'
+import { useEffect, ReactElement } from 'react'
 import { Navbar, Nav, Container, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import {
   LOGIN_ROUTE,
   HISTORY_ROUTE,
@@ -16,7 +17,7 @@ export const NavBar = (): ReactElement => {
   const { token, login, logout } = useAuth()
 
   const dispatch = useAppDispatch()
-  const user = useAppSelector((state) => state.user)
+  const user = useAppSelector()
   useEffect(() => {
     if (user.token) {
       login(user.token, user.id)
@@ -36,25 +37,29 @@ export const NavBar = (): ReactElement => {
       data-bs-theme={isDark ? 'dark' : 'light'}
     >
       <Container>
-        <Nav.Link href={HOME_ROUTE}>Home</Nav.Link>
+        <Nav.Link as={Link} to={HOME_ROUTE}>
+          Home
+        </Nav.Link>
         {token ? (
           <Nav className="ml-auto">
             <div className="d-flex px-5 align-items-center">
               <Nav.Link
+                as={Link}
                 style={isDark ? { color: 'white' } : { color: 'black' }}
-                href={FAVORITE_ROUTE}
+                to={FAVORITE_ROUTE}
               >
                 Избранное
               </Nav.Link>
               <Nav.Link
+                as={Link}
                 style={isDark ? { color: 'white' } : { color: 'black' }}
-                href={HISTORY_ROUTE}
+                to={HISTORY_ROUTE}
               >
                 История
               </Nav.Link>
               <ThemeButton />
             </div>
-            <Nav.Link href={LOGIN_ROUTE}>
+            <Nav.Link as={Link} to={LOGIN_ROUTE}>
               <Button variant="outline-danger" onClick={() => logOut()}>
                 Выйти
               </Button>
@@ -62,7 +67,7 @@ export const NavBar = (): ReactElement => {
           </Nav>
         ) : (
           <Nav className="ml-auto">
-            <Nav.Link href={LOGIN_ROUTE}>
+            <Nav.Link as={Link} to={LOGIN_ROUTE}>
               <Button variant="outline-danger">Авторизация</Button>
             </Nav.Link>
           </Nav>

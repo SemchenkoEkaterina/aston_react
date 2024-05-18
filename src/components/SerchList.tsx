@@ -1,5 +1,6 @@
 import { Card } from 'react-bootstrap'
 import { VariableSizeGrid as Grid } from 'react-window'
+import { Link } from 'react-router-dom'
 import { useGetSuggestsQuery } from '../store/api/gifApi'
 
 const SearchList = ({ searchInput }: { searchInput: string }) => {
@@ -26,10 +27,12 @@ const SearchList = ({ searchInput }: { searchInput: string }) => {
       {({ rowIndex, style }) => {
         return (
           <Card style={style}>
-            <Card.Img
-              variant="top"
-              src={suggests![rowIndex].images.fixed_height.url}
-            />
+            <Link to={`/gifs/${suggests![rowIndex].id}`}>
+              <Card.Img
+                variant="top"
+                src={suggests![rowIndex].images.fixed_height.url}
+              />
+            </Link>
             <Card.Body>
               <Card.Title>{suggests![rowIndex].title}</Card.Title>
             </Card.Body>

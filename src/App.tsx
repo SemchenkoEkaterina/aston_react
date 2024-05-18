@@ -6,14 +6,12 @@ import { ThemeProvider } from './providers/ThemeProvider'
 
 function App() {
   return (
-    <>
-      <ThemeProvider>
-        <BrowserRouter>
-          <NavBar />
-        </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <NavBar />
         <MainRouter />
-      </ThemeProvider>
-    </>
+      </BrowserRouter>
+    </ThemeProvider>
   )
 }
 
