@@ -3,14 +3,7 @@ import { VariableSizeGrid as Grid } from 'react-window'
 import { useGetSuggestsQuery } from '../store/api/gifApi'
 
 const SearchList = ({ searchInput }: { searchInput: string }) => {
-  const {
-    data: suggests,
-    error,
-    isLoading,
-  } = useGetSuggestsQuery({
-    api_key: process.env.REACT_APP_API_TOKEN,
-    searchInput: searchInput,
-  })
+  const { data: suggests, error, isLoading } = useGetSuggestsQuery(searchInput)
 
   if (isLoading) {
     return <p>Loading...</p>

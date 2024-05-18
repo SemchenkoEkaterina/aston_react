@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { removeFromFavorite } from '../store/slices/favoriteSlice'
 import { useAuth } from '../hooks/useAuth.hook'
 import { Button } from 'react-bootstrap'
-import { FavoriteButtonProps } from '../type/type'
+import { FavoriteButtonProps } from '../types'
 
 const FavoriteButton = ({ gifId }: FavoriteButtonProps) => {
   const [isFavorited, setIsFavorited] = useState(false)

@@ -7,10 +7,7 @@ const SearchPage = () => {
   const location = useLocation()
   const searchParams = new URLSearchParams(location.search)
   const searchTerm = searchParams.get('q') || ''
-  const { data, error, isLoading } = useGetFilteredGifsByNameQuery({
-    api_key: process.env.REACT_APP_API_TOKEN,
-    name: searchTerm,
-  })
+  const { data, error, isLoading } = useGetFilteredGifsByNameQuery(searchTerm)
   return (
     <div>
       <SearchBar value={searchTerm} onChange={String} />

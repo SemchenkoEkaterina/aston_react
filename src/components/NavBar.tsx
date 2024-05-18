@@ -39,10 +39,7 @@ export const NavBar = (): ReactElement => {
         <Nav.Link href={HOME_ROUTE}>Home</Nav.Link>
         {token ? (
           <Nav className="ml-auto">
-            <div
-              className="d-flex px-5"
-              style={{ display: 'flex', alignItems: 'center' }}
-            >
+            <div className="d-flex px-5 align-items-center">
               <Nav.Link
                 style={isDark ? { color: 'white' } : { color: 'black' }}
                 href={FAVORITE_ROUTE}

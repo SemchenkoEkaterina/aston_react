@@ -10,12 +10,9 @@ const Card = () => {
     data: gif,
     error,
     isLoading,
-  } = useGetGifByIdQuery(
-    { id: id || '', api_key: process.env.REACT_APP_API_TOKEN },
-    {
-      skip: !id,
-    },
-  )
+  } = useGetGifByIdQuery(id || '', {
+    skip: !id,
+  })
 
   if (isLoading) {
     return <p>Loading...</p>

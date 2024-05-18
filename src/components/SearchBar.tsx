@@ -7,7 +7,7 @@ import useDebounce from '../hooks/useDebounce.hook'
 import SearchList from './SerchList'
 import { Button, Form } from 'react-bootstrap'
 import { useAuth } from '../hooks/useAuth.hook'
-import { SearchBarProps } from '../type/type'
+import { SearchBarProps } from '../types'
 
 const SearchBar = ({ value }: SearchBarProps) => {
   const [inputValue, setInputValue] = useState(value)

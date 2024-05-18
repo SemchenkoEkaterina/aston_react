@@ -7,10 +7,7 @@ import GifList from '../components/GifsList'
 const Favorite = () => {
   const { loading } = useFavoritesData()
   const favoriteIds = useSelector(selectFavoriteIds)
-  const { data: gifs } = useGetGifsByIdQuery({
-    api_key: process.env.REACT_APP_API_TOKEN,
-    id: favoriteIds,
-  })
+  const { data: gifs } = useGetGifsByIdQuery(favoriteIds)
 
   return (
     <div>

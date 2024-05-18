@@ -10,7 +10,6 @@ const Home = () => {
     error: allGifsError,
     isLoading: allGifsLoading,
   } = useGetAllGifsQuery({
-    api_key: process.env.REACT_APP_API_TOKEN,
     limit: 20,
     offset: 1,
   })

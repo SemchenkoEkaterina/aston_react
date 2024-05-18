@@ -26,9 +26,9 @@ class ErrorBoundary extends React.Component<
     if (this.state.hasError) {
       return (
         <div>
-          <p>Что-то пошло не так.</p>
+          <p>Something went wrong.</p>
           <Link to={`/`}>
-            <button>Вернуться на главную</button>
+            <button>Go back to the main page</button>
           </Link>
         </div>
       )

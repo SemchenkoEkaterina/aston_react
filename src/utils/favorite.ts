@@ -25,12 +25,13 @@ export const removeFavorite = async (id: string, userId: string) => {
 export const isFavorite = async (
   id: string,
   userId: string,
-): Promise<boolean | undefined> => {
+): Promise<boolean> => {
   if (userId) {
     const favoriteRef = doc(db, `users/${userId}/favorites/${id}`)
     const docSnap = await getDoc(favoriteRef)
     return docSnap.exists()
   }
+  return false
 }
 
 export const fetchFavoriteIds = async (userId: string): Promise<string[]> => {

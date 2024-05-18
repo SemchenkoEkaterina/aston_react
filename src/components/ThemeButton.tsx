@@ -3,6 +3,7 @@ import { useTheme } from '../providers/ThemeProvider'
 
 const ThemeButton = () => {
   const { isDark, toggleTheme } = useTheme()
+  const colorGray = 'rgba(var(--bs-light-rgb), var(--bs-bg-opacity))'
   return (
     <Form>
       <Form.Check
@@ -14,8 +15,7 @@ const ThemeButton = () => {
           isDark
             ? { backgroundColor: 'black', color: 'white' }
             : {
-                backgroundColor:
-                  'rgba(var(--bs-light-rgb), var(--bs-bg-opacity))',
+                backgroundColor: colorGray,
                 color: 'black',
               }
         }

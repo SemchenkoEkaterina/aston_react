@@ -1,28 +1,28 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { Suggest, Query, ImagesFix } from '../../type/type'
+import { Suggest, ImagesFix } from '../../types'
 
+const key_api = process.env.REACT_APP_API_TOKEN
 export const gifApi = createApi({
   reducerPath: 'gifApi',
   baseQuery: fetchBaseQuery({ baseUrl: 'https://api.giphy.com/v1/gifs/' }),
   endpoints: (builder) => ({
     getAllGifs: builder.query({
-      query: ({ api_key, limit, offset }) => ({
+      query: ({ limit, offset }) => ({
         url: 'trending/',
-        params: { api_key, limit, offset },
+        params: { api_key: key_api, limit, offset },
       }),
     }),
     getGifById: builder.query({
-      query: ({ api_key, id }) => `${id}?api_key=${api_key}`,
+      query: (id) => `${id}?api_key=${key_api}`,
     }),
     getGifsById: builder.query({
-      query: ({ api_key, id }) => `?ids=${id}&api_key=${api_key}`,
+      query: (id) => `?ids=${id}&api_key=${key_api}`,
     }),
     getFilteredGifsByName: builder.query({
-      query: ({ api_key, name }) => `search/?q=${name}&api_key=${api_key}`,
+      query: (name) => `search/?q=${name}&api_key=${key_api}`,
     }),
-    getSuggests: builder.query<Suggest[], Query>({
-      query: ({ api_key, searchInput }) =>
-        `search?q=${searchInput}&api_key=${api_key}`,
+    getSuggests: builder.query<Suggest[], string>({
+      query: (searchInput) => `search?q=${searchInput}&api_key=${key_api}`,
       transformResponse: (response): Suggest[] => {
         const res = response as {
           data: { id: string; title: string; images: ImagesFix }[]

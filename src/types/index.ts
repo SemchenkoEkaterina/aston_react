@@ -32,11 +32,6 @@ export type ImagesFix = {
   fixed_height: { url: string; height: string; width: string }
 }
 
-export type Query = {
-  api_key: string | undefined
-  searchInput: string
-}
-
 export type FormProps = {
   title: string
   isLogin: boolean

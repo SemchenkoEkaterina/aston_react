@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { Card, Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { GifProp } from '../type/type'
+import { GifProp } from '../types'
 import FavoriteButton from './FavoriteButton'
 
 const GifCard = ({ gif, children }: GifProp) => {
@@ -12,8 +12,8 @@ const GifCard = ({ gif, children }: GifProp) => {
           <Card.Img variant="top" src={gif.images.original.url} />
         </Link>
         <Card.Body
+          className="d-flex"
           style={{
-            display: 'flex',
             alignContent: 'center',
             justifyContent: 'space-between',
           }}

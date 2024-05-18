@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { Row } from 'react-bootstrap'
-import { GifsProps } from '../type/type'
+import { GifsProps } from '../types'
 import GifCard from './GifCard'
 
 const GifList = ({ gifs }: GifsProps) => {

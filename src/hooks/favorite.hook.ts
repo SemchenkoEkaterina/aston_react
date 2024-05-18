@@ -23,7 +23,7 @@ const useFavoritesData = () => {
   useEffect(() => {
     loadFavorites(userId)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [userId, dispatch])
+  }, [userId])
 
   return { loading }
 }
